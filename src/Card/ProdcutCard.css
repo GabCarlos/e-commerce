@@ -1,0 +1,59 @@
+.ProductCard{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  background-color: rgb(240, 234, 234);
+  cursor: pointer;
+  margin: 0 auto;
+  position: relative;
+}
+
+.img{
+  width: 100%;
+}
+
+.infos{
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.price{
+  font-size: 30px;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 10px;
+  font-size: x-large;
+}
+
+.title{
+  font-size: 15px;
+  color: black;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: x-large;
+}
+
+.AddCard{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  color: #0c5dd6;
+  justify-content: center;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(255,255,255, 0.8);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.ProductCard:hover{
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ProductCard:hover .AddCard{
+  display: flex;
+}
