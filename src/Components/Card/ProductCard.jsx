@@ -2,7 +2,7 @@ import React from "react";
 import './ProdcutCard.css';
 import {BsFillCartFill} from 'react-icons/bs'
 import propTypes from 'prop-types'
-import formatCurrency from "../utils/formatCurrency";
+import formatCurrency from "../../utils/formatCurrency";
 
 //Função que está passando os produtos junto com os seus valores, descrições e imagens:
 function ProductCard({ data }) {
@@ -28,7 +28,7 @@ function ProductCard({ data }) {
 
 export default ProductCard;
 
-//Passando o componente props e data:
+//Passando o componente props e dados:
 ProductCard.propTypes = {
   data: propTypes.shape({}),
 
