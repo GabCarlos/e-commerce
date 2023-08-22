@@ -1,6 +1,4 @@
 import React from 'react';
-//import { PRODUCTS } from '../../product';
-//import { Product } from './product';
 import "./Shop.css";
 
 //Colocando os produtos com as suas imagens, descrições e preços na tela principal:

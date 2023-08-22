@@ -1,20 +1,17 @@
-import { useState, useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import React from "react";
 import './products.css'
 import fetchProducts from '../../api/fetchProducts';
 import ProductCard from '../Card/ProductCard';
-import Loading from '../Loading/Loading';
 import AppContext from '../../context/appcontext';
+import Loading from '../Loading/Loading';
 
 
 //criando a função que passa os itens para o sistema:
 function Products() {
 
-//Const do Loading:
-const [loading, setLoading] = useState(true);
-
 //Desistruturando as informações do Provider:
-const {conteudo, setConteudo} = useContext(AppContext);
+const {conteudo, setConteudo, loading, setLoading} = useContext(AppContext);
 
 //função que atualiza os itens que a gente que passar na tela principal
   useEffect(() => {

@@ -3,12 +3,20 @@ import './ProdcutCard.css';
 import {BsFillCartFill} from 'react-icons/bs'
 import propTypes from 'prop-types'
 import formatCurrency from "../../utils/formatCurrency";
+import { useContext } from "react";
+import AppContext from "../../context/appcontext";
 
 //Função que está passando os produtos junto com os seus valores, descrições e imagens:
 function ProductCard({ data }) {
 
-  const { title, thumbnail, price } = data;
+  const { title, thumbnail, price } = data; //Const base das informações.
 
+  const {Cartitem, setCartitem} = useContext(AppContext);
+
+//Função que manda que atualiza as informações do item no carrinho
+  const handleheadcart = () =>{setCartitem([...Cartitem, data])};
+
+//Passando o valor, titulo e nome do item:  
   return(
 
     <section className="ProductCard">
@@ -20,7 +28,11 @@ function ProductCard({ data }) {
         <h2 className="title"> {title} </h2>
       </div>
 
-      <button type="button" className="AddCard"><BsFillCartFill/></button>
+      <button
+       type="button"
+       className="AddCard"
+       onClick={handleheadcart}
+      ><BsFillCartFill/></button>
 
     </section>
   );

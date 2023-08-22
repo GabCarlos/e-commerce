@@ -10,13 +10,17 @@ export function SearchBar() {
   const [searchValue, setSearchValue] = useState('');
 
 //Consumindo os valores do Provider, podendo desistruturar qualquer informação:
-const {setConteudo} = useContext(AppContext)
+const {setConteudo, setLoading} = useContext(AppContext)
 
 //Dando as funções para a barra de busca:
 const handleSearch = async (event) => {
   event.preventDefault(); // Corrigido o nome da função
+  setLoading(true)
+
   const produt = await fetchProducts(searchValue);
+  
   setConteudo(produt);
+  setLoading(false);
   setSearchValue('');
 };
 
