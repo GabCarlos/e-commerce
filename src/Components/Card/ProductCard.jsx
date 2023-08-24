@@ -11,10 +11,10 @@ function ProductCard({ data }) {
 
   const { title, thumbnail, price } = data; //Const base das informações.
 
-  const {Cartitem, setCartitem} = useContext(AppContext);
+  const {cartItens, setcartItens} = useContext(AppContext);
 
-//Função que manda que atualiza as informações do item no carrinho
-  const handleheadcart = () =>{setCartitem([...Cartitem, data])};
+//Pega a informação do produto e passa pro array de itens no carrinho:
+  const handleheadcart = () =>{setcartItens([...cartItens, data])};
 
 //Passando o valor, titulo e nome do item:  
   return(

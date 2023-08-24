@@ -8,17 +8,18 @@ import propTypes from 'prop-types';
 function Cartitem({data}){
 
   const {thumbnail, tilte, price} = data;
-  return(
+
+return(
     <section className="cart-item">
 
-      <img
+      <image
        src={thumbnail}
        alt="image of product"
        className="cart-item-image"/>
 
        <div className="cart-item-content">
         <h3 className="cart-item-title">{tilte}</h3>
-        {/*<h3 className="cart-item-price">{formatCurrency (price)}</h3>*/}
+        <h3 className="cart-item-price">{formatCurrency (price, 'BRL')}</h3>
        </div>
 
        <button 
@@ -32,3 +33,9 @@ function Cartitem({data}){
 };
 
 export default Cartitem;
+
+//Passando o componente props e dados:
+Cartitem.propTypes = {
+  data: propTypes.shape({}),
+
+}.isRequired;

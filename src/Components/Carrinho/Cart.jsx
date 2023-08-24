@@ -6,17 +6,21 @@ import AppContext from "../../context/appcontext";
 //Função que define o que vai chegar no carrinho:
 function Cart(){
 
-  const {Cartitem} = useContext(AppContext)//Com este array, ira redenrizar TODOS os itens dentro do carrinho:
+    const {cartItens} = useContext(AppContext)//Com este array, ira redenrizar TODOS os itens dentro do carrinho:
 
-  return(
+    if (!cartItens) {
+      return <p>Nenhum item no carrinho</p>;
+    }
+
+    return(
     <section className="cart">
       <div className="cart-itens">
 
-      {Cartitem.map((Cartitem) => <Cartitem key={Cartitem.id} data={Cartitem}/>)}  
+      {cartItens.map((cartitem) => <Cartitem key={cartitem.id} data={cartitem}/>)}  
 
       </div>
       <div className="cart-resume">Resumo do carrinho</div>
-    </section>
+    </section> 
   );
 };
 

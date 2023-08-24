@@ -4,18 +4,17 @@ import AppContext from "./appcontext";
 
 //Componente que vai prover os dados:
 function Provider({children}){
-
 const [conteudo, setConteudo] = useState([]);//const dos itens.
 const [loading, setLoading] = useState(true);//Const do Loading.
-const [Cartitem, setCartitem] = useState(true);//Const do carrinho.
+const [cartItens, setcartItens] = useState();//Const do carrinho.
 
   const value= {
     conteudo,
     setConteudo,
     loading,
     setLoading,
-    Cartitem,
-    setCartitem
+    cartItens,
+    setcartItens
   }
 
   return(
