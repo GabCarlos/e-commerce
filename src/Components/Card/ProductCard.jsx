@@ -1,5 +1,5 @@
 import React from "react";
-import './ProdcutCard.css';
+import './ProductCard.css';
 import {BsFillCartFill} from 'react-icons/bs'
 import propTypes from 'prop-types'
 import formatCurrency from "../../utils/formatCurrency";
