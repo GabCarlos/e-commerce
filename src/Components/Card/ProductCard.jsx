@@ -1,10 +1,11 @@
 import React from "react";
-import './ProdcutCard.css';
+import './ProductCard.css';
 import {BsFillCartFill} from 'react-icons/bs'
 import propTypes from 'prop-types'
 import formatCurrency from "../../utils/formatCurrency";
 import { useContext } from "react";
 import AppContext from "../../context/appcontext";
+
 
 //Função que está passando os produtos junto com os seus valores, descrições e imagens:
 function ProductCard({ data }) {

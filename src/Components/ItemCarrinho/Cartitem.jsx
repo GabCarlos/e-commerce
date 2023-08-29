@@ -1,41 +1,47 @@
-import React from "react";
-import './Cartitem.css'
-import {MdDeleteForever} from 'react-icons/md'
-import formatCurrency from "../../utils/formatCurrency";
+import React, { useContext } from 'react';
 import propTypes from 'prop-types';
+import { BsCartDashFill } from 'react-icons/bs';
 
-//Função que contem os dados do item no carrinho:
-function Cartitem({data}){
+import './CartItem.css';
+import formatCurrency from '../../utils/formatCurrency';
+import AppContext from '../../context/AppContext';
 
-  const {thumbnail, tilte, price} = data;
+function CartItem({ data }) {
 
-return(
+  const { cartItems, setCartItems } = useContext(AppContext);
+  const { id, thumbnail, title, price } = data;
+
+  const handleRemoveItem = () => {
+    const updatedItems = cartItems.filter((item) => item.id != id);
+    setCartItems(updatedItems);
+  };
+
+  return (
     <section className="cart-item">
+      <img
+        src={thumbnail}
+        alt="imagem do produto"
+        className="cart-item-image"
+      />
 
-      <image
-       src={thumbnail}
-       alt="image of product"
-       className="cart-item-image"/>
+      <div className="cart-item-content">
+        <h3 className="cart-item-title">{title}</h3>
+        <h3 className="cart-item-price">{formatCurrency(price, 'BRL')}</h3>
 
-       <div className="cart-item-content">
-        <h3 className="cart-item-title">{tilte}</h3>
-        <h3 className="cart-item-price">{formatCurrency (price, 'BRL')}</h3>
-       </div>
-
-       <button 
-       type="button"
-       className="button-remove-item">
-       <MdDeleteForever/>
-       </button>
-
+        <button
+          type="button"
+          className="button__remove-item"
+          onClick={ handleRemoveItem }
+        >
+          <BsCartDashFill />
+        </button>
+      </div>
     </section>
   );
-};
+}
 
-export default Cartitem;
+export default CartItem;
 
-//Passando o componente props e dados:
-Cartitem.propTypes = {
-  data: propTypes.shape({}),
-
+CartItem.propTypes = {
+  data: propTypes.object
 }.isRequired;
