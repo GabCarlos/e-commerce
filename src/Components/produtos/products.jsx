@@ -18,7 +18,7 @@ const {conteudo, setConteudo, loading, setLoading} = useContext(AppContext);
     
     fetchProducts('').then((response)=> {
       setConteudo(response);
-      setLoading(false);
+      setLoading(false);  
     });
 
   }, []);
