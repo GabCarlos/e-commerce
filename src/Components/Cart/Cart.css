@@ -1,11 +1,11 @@
-.cart {
+.Cart {
   width: 100%;
   max-width: 330px;
   background-color: white;
   height: 100vh;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 100px;
+  left: 700px;
   padding: 100px 20px 20px;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,7 @@
   font-size: 1.8rem;
   font-weight: 500;
   padding: 35px 0 15px;
+  margin-top: 100px;
   border-top: 1px solid #ddd;
 }
 

@@ -6,16 +6,14 @@ import formatCurrency from "../../utils/formatCurrency";
 import { useContext } from "react";
 import AppContext from "../../context/appcontext";
 
-
 //Função que está passando os produtos junto com os seus valores, descrições e imagens:
 function ProductCard({ data }) {
 
   const { title, thumbnail, price } = data; //Const base das informações.
 
-  const {cartItens, setcartItens} = useContext(AppContext);
+  const { cartItems, setcartItems} = useContext(AppContext);
 
-//Pega a informação do produto e passa pro array de itens no carrinho:
-  const handleheadcart = () =>{setcartItens([...cartItens, data])};
+  const handleAddCart = () => { setcartItems([ ...cartItems, data ]) };
 
 //Passando o valor, titulo e nome do item:  
   return(
@@ -32,7 +30,7 @@ function ProductCard({ data }) {
       <button
        type="button"
        className="AddCard"
-       onClick={handleheadcart}
+       onClick={handleAddCart}
       ><BsFillCartFill/></button>
 
     </section>
