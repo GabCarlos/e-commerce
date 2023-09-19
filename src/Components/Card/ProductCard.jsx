@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ProductCard.css";
 import { BsFillCartFill } from "react-icons/bs";
 import propTypes from "prop-types";
 import formatCurrency from "../../utils/formatCurrency";
-import { useContext } from "react";
 import AppContext from "../../context/appcontext";
 
 function ProductCard({ data }) {
   const { title, thumbnail, price } = data;
 
-  const { cartItems, setcartItems } = useContext(AppContext);
+  const { cartItems, setCartItems } = useContext(AppContext);
 
   const handleAddCart = () => {
-    setcartItems([...cartItems, data]);
+    setCartItems([...cartItems, data]);
   };
 
   return (

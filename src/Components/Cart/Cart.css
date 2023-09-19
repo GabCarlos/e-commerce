@@ -1,13 +1,91 @@
-/* Adicione este CSS ao seu arquivo Cart.css */
+/* Cart.css */
+
 .Cart {
-  background-color: #f2f2f2;
+  position: fixed;
+  top: 0;
+  right: -300px; /* Inicialmente, o carrinho está escondido na lateral direita */
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  transition: right 0.3s ease-in-out; /* Adiciona uma transição suave para a animação de abertura/fechamento */
+  overflow-y: auto;
   padding: 20px;
-  width: 300px; /* Ajuste o tamanho conforme necessário */
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); /* Sombra na lateral */
 }
 
-/* Adicione uma media query para tornar o carrinho responsivo em telas estreitas */
-@media (max-width: 768px) {
+.Cart.cart--active {
+  right: 0; /* Quando a classe cart--active é aplicada, o carrinho aparece na tela */
+}
+
+.cart-items {
+  margin-bottom: 20px;
+}
+
+.cart-resume {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilize o botão de fechar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Estilize os itens do carrinho */
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cart-item-content {
+  flex: 1;
+}
+
+.cart-item-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cart-item-price {
+  font-size: 14px;
+}
+
+/* Adicione um botão para remover itens do carrinho */
+.remove-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #f00;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
   .Cart {
     width: 100%;
+    right: -100%; /* Esconda o carrinho na lateral direita */
+    top: 0;
+  }
+
+  .Cart.cart--active {
+    right: 0;
   }
 }

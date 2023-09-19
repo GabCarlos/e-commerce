@@ -6,7 +6,7 @@ import AppContext from "./appcontext";
 function Provider({children}){
 const [conteudo, setConteudo] = useState([]);//const dos itens.
 const [loading, setLoading] = useState(true);//Const do Loading.
-const [cartItems, setcartItems] = useState([]);//Const do carrinho.
+const [cartItems, setCartItems] = useState([]);//Const do carrinho.
 
   const value= {
     conteudo,
@@ -14,7 +14,7 @@ const [cartItems, setcartItems] = useState([]);//Const do carrinho.
     loading,
     setLoading,
     cartItems,
-    setcartItems
+    setCartItems
   }
 
   return(
