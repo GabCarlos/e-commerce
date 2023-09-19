@@ -11,6 +11,11 @@
   width: 70px;
 }
 
+.cart-item-content {
+  flex-grow: 1; /* Use flex-grow para preencher o espaço disponível */
+  padding: 0 15px; /* Reduzi o padding para economizar espaço */
+}
+
 .cart-item-title {
   font-size: 0.85rem;
   font-weight: 500;
@@ -19,12 +24,8 @@
 }
 
 .cart-item-price {
-  font-size: 22px;
+  font-size: 16px; /* Reduzi o tamanho da fonte para economizar espaço */
   font-weight: 500;
-}
-
-.cart-item-content {
-  padding: 0 35px 0 10px;
 }
 
 .remove-item {
@@ -36,4 +37,15 @@
   border: none;
   background: none;
   cursor: pointer;
+}
+
+/* Adicione uma media query para ajustar o tamanho da fonte em telas menores */
+@media (max-width: 768px) {
+  .cart-item-title {
+    font-size: 0.7rem; /* Reduzi ainda mais o tamanho da fonte */
+  }
+
+  .cart-item-price {
+    font-size: 14px; /* Reduzi o tamanho da fonte para economizar espaço */
+  }
 }

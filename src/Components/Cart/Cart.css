@@ -1,36 +1,13 @@
+/* Adicione este CSS ao seu arquivo Cart.css */
 .Cart {
-  width: 100%;
-  max-width: 330px;
-  background-color: white;
-  height: 100vh;
-  position: fixed;
-  top: 100px;
-  left: 700px;
-  padding: 100px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transform: translate(110%, 0);
-  transition: all 400ms ease;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 300px; /* Ajuste o tamanho conforme necessário */
 }
 
-.cart-items {
-  flex-grow: 1;
-  overflow: auto;
-}
-
-.cart-resume {
-  font-size: 1.8rem;
-  font-weight: 500;
-  padding: 35px 0 15px;
-  margin-top: 100px;
-  border-top: 1px solid #ddd;
-}
-
-.cart-items .cart-item:last-child {
-  border-bottom: none;
-}
-
-.cart--active {
-  transform: translate(0, 0);
+/* Adicione uma media query para tornar o carrinho responsivo em telas estreitas */
+@media (max-width: 768px) {
+  .Cart {
+    width: 100%;
+  }
 }

@@ -1,61 +1,64 @@
-.ProductCard{
+.ProductCard {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; /* Coloca o ícone junto com o item */
   width: 100%;
   max-width: 300px;
   background-color: rgb(240, 234, 234);
   cursor: pointer;
   margin: 0 auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 20px;
   position: relative;
-  margin-top: -100px;
-  right: 10px;
 }
 
-.img{
+.img {
   width: 100%;
 }
 
-.infos{
-  padding: 20px;
-  border: 1px solid #ddd;
+.infos {
+  padding: 10px;
 }
 
-.price{
-  font-size: 30px;
+.price {
+  font-size: 20px;
   font-weight: 400;
-  display: block;
-  margin-bottom: 10px;
-  font-size: x-large;
+  margin-bottom: 5px;
 }
 
-.title{
-  font-size: 15px;
+.title {
+  font-size: 16px;
   color: black;
-  line-height: 1.5;
+  line-height: 1.2;
   font-weight: 500;
-  font-size: x-large;
 }
 
-.AddCard{
+.AddCard {
   display: none;
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 45px;
-  height: 45px;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
   color: #0c5dd6;
   justify-content: center;
   border: none;
   border-radius: 50px;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
 }
 
-.ProductCard:hover{
+.ProductCard:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.ProductCard:hover .AddCard{
+.ProductCard:hover .AddCard {
   display: flex;
 }

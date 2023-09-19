@@ -1,8 +1,9 @@
 /* Search.css */
 
-.form {
+.search-bar {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha em telas menores */
 }
 
 .inputSearch {
@@ -11,8 +12,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-right: 10px;
-  width: 200px;
-  margin-top: 15px;
+  flex-grow: 1; /* Ocupa todo o espaço disponível */
+  margin-bottom: 10px; /* Adicionado um espaço inferior */
 }
 
 .buttonSearch {
@@ -25,11 +26,24 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 210px;
+  margin-left: 10px; /* Ajuste a margem esquerda para separar o botão */
   margin-bottom: 10px;
-  margin-top: -37px;
   margin-right: 10px;
 }
 
 .buttonSearch:hover {
-  background-color: #d1d1d1;}
+  background-color: #d1d1d1;
+}
+
+/* Adicione uma media query para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+  .inputSearch {
+    width: 100%; /* 100% de largura em telas menores */
+    margin-right: 0; /* Remova a margem direita */
+  }
+
+  .buttonSearch {
+    margin-left: 0; /* Remova a margem esquerda */
+    margin-top: 10px; /* Adicione uma margem superior */
+  }
+}

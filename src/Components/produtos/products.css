@@ -1,8 +1,16 @@
-.container{
+.container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 120px 20px 20px;
+  padding: 20px;
   display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(200px, 1fr) );
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 30px;
+}
+
+/* Adicione uma media query para ajustar o número de colunas em telas menores */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
 }

@@ -1,55 +1,59 @@
-.shopTitle{
-  margin-top: 100px;
+/* Shop.css */
+
+.shopTitle {
+  margin-top: 20px; /* Reduzi a margem superior para telas menores */
   text-align: center;
-  font-size: 40px;
+  font-size: 30px; /* Reduzi o tamanho da fonte para telas menores */
   color: #009FBD;
 }
 
-.products{
+.produtos {
   width: 100%;
-  height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta a grade responsiva */
+  gap: 20px;
+  justify-items: center; /* Centraliza os itens horizontalmente */
 }
 
-.product{
+.produto {
   border-radius: 15px;
-  width: 300px;
-  height: 350px;
-  margin: 100px;
+  width: 250px; /* Ajusta o tamanho dos produtos */
+  height: auto;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.product img{
-  width: 400px;
-}
-
-.product .descrição{
   text-align: center;
 }
 
-.product:hover{
-  transition: 0.3s ease-in;
+.produto img {
+  width: 100%; /* Torna a imagem responsiva dentro do container */
+}
+
+.product:hover {
+  transition: 0.3s ease;
   cursor: pointer;
 }
 
-.addToCartBttn{
+.addToCartBttn {
   background-color: transparent;
-  border: 2px solid rgb( 19, 19, 19 );
+  border: 2px solid rgb(19, 19, 19);
   min-width: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 10px; /* Ajusta o espaçamento do botão */
   border-radius: 15px;
 }
 
-.addToCartBttn:hover{
-  background-color: rgb( 19, 19, 19 );
+.addToCartBttn:hover {
+  background-color: rgb(19, 19, 19);
   color: white;
   cursor: pointer;
+}
+
+/* Adicione uma media query para ajustar o título em telas menores */
+@media (max-width: 768px) {
+  .shopTitle {
+    margin-top: 10px; /* Reduzi ainda mais a margem superior */
+    font-size: 24px; /* Reduzi o tamanho da fonte para telas menores */
+  }
 }
