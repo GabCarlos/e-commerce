@@ -4,6 +4,7 @@ import { MdRemoveCircle } from 'react-icons/md';
 import formatCurrency from '../../utils/formatCurrency';
 
 function CartItem({ data }) {
+  
   const { thumbnail, title, price } = data;
 
   return (

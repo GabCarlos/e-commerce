@@ -7,16 +7,14 @@ import AppContext from "../../context/appcontext"; // Importe o contexto do apli
 import "./Navbar.css";
 
 export const Navbar = () => {
+
   const [isCartOpen, setIsCartOpen] = useState(false);
   const { cartItems } = useContext(AppContext); // Acesse o estado do carrinho do contexto
 
-  // Função para abrir/fechar o carrinho
-
+// Função para abrir/fechar o carrinho
 const toggleCart = () => {
   setIsCartOpen(!isCartOpen);
-  console.log('Carrinho foi clicado'); // Adicione isso para verificar
 };
-
 
   return (
     <div className="Navbar">

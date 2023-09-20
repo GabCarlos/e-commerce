@@ -10,11 +10,6 @@ export const Shop = () => {
         <div className='shopTitle'>
             <h1>BFR</h1>
         </div>
-        
-      {/*<div className='products'>
-            {PRODUCTS.map((product) => <product data={product}/> )}
-  </div>*/} 
-
     </div>
 
   );
