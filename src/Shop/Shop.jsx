@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import './Shop.css';
-import Cart from '../Components/Cart/Cart';
+import React from 'react';
+import "./Shop.css";
 
 export const Shop = () => {
 
