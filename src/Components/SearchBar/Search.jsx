@@ -7,7 +7,7 @@ import fetchProducts from '../../api/fetchProducts';
 //Passando o item que irá fazer busca:
 export function SearchBar() {
 
-  const [searchValue, setSearchValue] = useState('');
+const [searchValue, setSearchValue] = useState('');
 
 //Consumindo os valores do Provider, podendo desistruturar qualquer informação:
 const {setConteudo, setLoading} = useContext(AppContext)
@@ -23,8 +23,6 @@ const handleSearch = async (event) => {
   setLoading(false);
   setSearchValue('');
 };
-
-
 
   return(
     

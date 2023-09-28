@@ -20,11 +20,13 @@ const toggleCart = () => {
     <div className="Navbar">
       <div className="links">
         <Link to="/"> Shop </Link>
+
         <button onClick={toggleCart}>
           <ShoppingCart size={30} />
           {/* Exiba a quantidade de itens no carrinho */}
           {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
         </button>
+       
         <SearchBar />
       </div>
 
