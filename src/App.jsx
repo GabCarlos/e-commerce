@@ -1,22 +1,22 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'; //Puxa a extensão de rotas.
-import Cart from './Components/Cart/Cart'; //Passando Carts.
-import { Shop } from './Shop/Shop';//Passando Shop.
+import {BrowserRouter, Route, Routes} from 'react-router-dom'; //Puxa a extensão de rotas.
 import Products from './Components/produtos/products';//Passando os componentes do Products.
 import Provider from './context/Provider';//Passando os componentes do Provider.
 import { Navbar } from './Components/Navbar/Navbar';//Passando os componentes do Navbar.
+import { Shop } from './Shop/Shop';
+import Cart from './Components/Cart/Cart';
 
 function App() {
   return (
     <Provider>
-     <Router>
-      <Navbar/>
+      <BrowserRouter>
+      <Shop/>
+       <Products/>    
        <Routes>
-         <Route path='/' element={<Shop/>}/>
-         <Route path='/cart'element={<Cart/>}/>
+        <Route path='Navbar' element={<Navbar/>}/>
+        <Route path='Cart' element={<Cart/>}/>
        </Routes>
-     </Router>
-     <Products/>    
+      </BrowserRouter>
     </Provider>
   );
 };

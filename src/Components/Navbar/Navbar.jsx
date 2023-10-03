@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import { Link } from 'react-router-dom';
 import { ShoppingCart } from 'phosphor-react';
 import { SearchBar } from '../SearchBar/Search';
 import Cart from '../Cart/Cart';
@@ -19,7 +18,7 @@ const toggleCart = () => {
   return (
     <div className="Navbar">
       <div className="links">
-        <Link to="/"> Shop </Link>
+        <div to="/Navbar" > Shop </div>
 
         <button onClick={toggleCart}>
           <ShoppingCart size={30} />
