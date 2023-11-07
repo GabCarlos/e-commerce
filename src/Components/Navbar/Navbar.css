@@ -1,13 +1,9 @@
-/* Navbar.css */
-
-/* Estilos base para Navbar */
+/* Default styles */
 .Navbar {
-  background-color: #009FBD;
-  color: white;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 
 .links {
@@ -15,77 +11,14 @@
   align-items: center;
 }
 
-.links a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  margin-right: 20px;
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-button:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
-}
-
-/* Estilos para o Carrinho */
-.Cart {
-  display: none; /* Inicialmente oculto */
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.cart-item img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-
-/* Adicione outros estilos ao carrinho, como botões de remoção, etc. */
-
-/* Mostre o carrinho quando estiver aberto */
-.Cart.cart--active {
-  display: block;
-}
-
-/* CSS responsivo para telas menores */
+/* Media query for responsiveness */
 @media (max-width: 768px) {
   .Navbar {
-    flex-direction: column; /* Alinhe os elementos verticalmente */
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .links {
-    margin-top: 20px; /* Aumente a margem entre os links e o ícone do carrinho */
-  }
-
-  /* Estilize os links para melhor espaçamento em telas menores */
-  .links a {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  /* Ajuste a posição do carrinho para o centro na tela */
-  .Cart {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 10px;
   }
 }

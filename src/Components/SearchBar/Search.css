@@ -1,49 +1,47 @@
-/* Search.css */
-
+/* Default styles */
 .search-bar {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha em telas menores */
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .inputSearch {
+  flex: 1;
   padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
-  margin-right: 10px;
-  flex-grow: 1; /* Ocupa todo o espaço disponível */
-  margin-bottom: 10px; /* Adicionado um espaço inferior */
+  font-size: 16px;
+  outline: none;
+  width: 200px;
+  margin-top: 100px;
 }
 
 .buttonSearch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #eaeaea;
+  background: #51606a;
   border: none;
   border-radius: 5px;
+  padding: 10px 15px;
+  margin-left: 210px;
+  margin-top: 60px;
   cursor: pointer;
-  margin-left: 10px; /* Ajuste a margem esquerda para separar o botão */
-  margin-bottom: 10px;
-  margin-right: 10px;
+  color: #fff;
 }
 
-.buttonSearch:hover {
-  background-color: #d1d1d1;
-}
-
-/* Adicione uma media query para ajustar o layout em telas menores */
+/* Media query for responsiveness */
 @media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .inputSearch {
-    width: 100%; /* 100% de largura em telas menores */
-    margin-right: 0; /* Remova a margem direita */
+    margin-top: 10px;
+    max-width: 100%;
   }
 
   .buttonSearch {
-    margin-left: 0; /* Remova a margem esquerda */
-    margin-top: 10px; /* Adicione uma margem superior */
+    margin-top: 10px;
+    max-width: 100%;
   }
 }

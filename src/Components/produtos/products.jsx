@@ -21,7 +21,7 @@ const {conteudo, setConteudo, loading, setLoading} = useContext(AppContext);
       setLoading(false);  
     });
 
-  }, []);
+  }, [setConteudo, setLoading]);
 
   return(
 
