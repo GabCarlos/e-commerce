@@ -3,6 +3,7 @@ import {BiSearchAlt} from 'react-icons/bi' //Passando o icone do react icons
 import './Search.css';
 import AppContext from "../../context/appcontext";
 import fetchProducts from '../../api/fetchProducts';
+import { Link } from "react-router-dom";
 
 //Passando o item que irá fazer busca:
 export function SearchBar() {
@@ -36,9 +37,11 @@ const handleSearch = async (event) => {
       required
       /> 
       
-      <button type='submit' className='buttonSearch'>
+      <Link to="/ProductCard"> <button type='submit' className='buttonSearch'>
        <BiSearchAlt/>
-      </button> 
+      </button></Link>
+
+      
 
     </form>
   );

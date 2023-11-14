@@ -26,6 +26,8 @@
   margin-top: 60px;
   cursor: pointer;
   color: #fff;
+  width: 100px;
+  height: 100px;
 }
 
 /* Media query for responsiveness */
@@ -43,5 +45,6 @@
   .buttonSearch {
     margin-top: 10px;
     max-width: 100%;
+    color: black;
   }
 }
