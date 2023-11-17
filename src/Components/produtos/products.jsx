@@ -1,36 +1,46 @@
-import { useEffect, useContext } from 'react';
-import React from "react";
-import './products.css'
+import React, { useEffect, useContext, useState } from 'react';
+import './products.css';
 import fetchProducts from '../../api/fetchProducts';
 import ProductCard from '../Card/ProductCard';
 import AppContext from '../../context/appcontext';
 import Loading from '../Loading/Loading';
 
-
-//criando a função que passa os itens para o sistema:
 function Products() {
+  const { conteudo, setConteudo, loading, setLoading } = useContext(AppContext);
+  const [searchQuery, setSearchQuery] = useState('');
 
-//Desistruturando as informações do Provider:
-const {conteudo, setConteudo, loading, setLoading} = useContext(AppContext);
-
-//função que atualiza os itens que a gente que passar na tela principal
   useEffect(() => {
-    
-    fetchProducts('').then((response)=> {
+    fetchProducts(searchQuery).then((response) => {
       setConteudo(response);
-      setLoading(false);  
+      setLoading(false);
     });
+  }, [searchQuery, setConteudo, setLoading]);
 
-  }, [setConteudo, setLoading]);
+  const handleReturnClick = () => {
+    // Lógica para limpar a barra de pesquisa e os itens exibidos
+    setSearchQuery('');
+    setConteudo([]); // Limpar a lista de conteúdo
+  };
 
-  return(
+  return (
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
+        <section className="container">
+          {conteudo.map((item) => (
+            <ProductCard key={item.id} data={item} />
+          ))}
 
-//Função que retorna os produtos a tela principal ou a tela de loading:
-    (loading && <Loading/>) || ( <section className="container">
-      {conteudo.map((conteudo) => <ProductCard key={conteudo.id} data={conteudo}/>)}
-    </section>)
-
+           {conteudo.length > 0 && ( // Renderiza o botão apenas se houver itens na lista de conteúdo
+            <button onClick={handleReturnClick}>Return</button>
+          )}
+          
+        </section>
+      )}
+    
+    </>
   );
-};
+}
 
 export default Products;

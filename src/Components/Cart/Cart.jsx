@@ -19,7 +19,7 @@ function Cart() {
           <CartItem key={cartItem.id} data={cartItem} />
         ))}
 
-       <Link to="/"><button className="button">Retorne</button></Link>
+       <Link to="/Navbar"><button className="button">Retorne</button></Link>
 
       </div>
 

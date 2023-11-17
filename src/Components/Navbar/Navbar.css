@@ -3,12 +3,58 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 100px;
   padding: 10px;
 }
 
 .links {
   display: flex;
   align-items: center;
+}
+
+.search-bar {
+  display: flex;
+}
+.cart{
+  background: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 280px;
+}
+
+.pag_p{
+  background: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 350px;
+}
+
+.inputSearch {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.buttonSearch {
+  background: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  width: 40px;
+  height: 30px;
+  margin-top: 5px;
+  margin-left: 170px;
 }
 
 /* Media query for responsiveness */
@@ -20,5 +66,20 @@
 
   .links {
     margin-top: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .inputSearch {
+    flex: 1;
+    margin-right: 0;
+  }
+
+  .buttonSearch {
+    margin-top: 10px;
+
   }
 }
