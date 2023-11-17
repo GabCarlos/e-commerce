@@ -20,7 +20,7 @@ const handleReturnClick = () => {
   // Lógica para limpar a barra de pesquisa e os itens exibidos
    setSearchQuery('');
    setConteudo([]); // Limpar a lista de conteúdo
-s};
+};
 
   return (
     <>
