@@ -9,38 +9,35 @@ function Products() {
   const { conteudo, setConteudo, loading, setLoading } = useContext(AppContext);
   const [searchQuery, setSearchQuery] = useState('');
 
-  useEffect(() => {
-    fetchProducts(searchQuery).then((response) => {
-      setConteudo(response);
-      setLoading(false);
+ useEffect(() => {
+   fetchProducts(searchQuery).then((response) => {
+     setConteudo(response);
+     setLoading(false);
     });
-  }, [searchQuery, setConteudo, setLoading]);
+}, [searchQuery, setConteudo, setLoading]);
 
-  const handleReturnClick = () => {
-    // Lógica para limpar a barra de pesquisa e os itens exibidos
-    setSearchQuery('');
-    setConteudo([]); // Limpar a lista de conteúdo
-  };
+const handleReturnClick = () => {
+  // Lógica para limpar a barra de pesquisa e os itens exibidos
+   setSearchQuery('');
+   setConteudo([]); // Limpar a lista de conteúdo
+s};
 
   return (
     <>
       {loading ? (
         <Loading />
-      ) : (
-        <section className="container">
+       ) : (
+        <section className='container'>
           {conteudo.map((item) => (
             <ProductCard key={item.id} data={item} />
           ))}
-
            {conteudo.length > 0 && ( // Renderiza o botão apenas se houver itens na lista de conteúdo
             <button onClick={handleReturnClick}>Return</button>
-          )}
-          
+          )}         
         </section>
       )}
-    
     </>
   );
-}
+};
 
 export default Products;

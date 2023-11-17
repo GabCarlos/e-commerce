@@ -12,15 +12,13 @@ function Cart() {
 
   return (
     <section className="Cart cart--active">
-    
-      <div className="cart-items">
+       <div className="cart-items">
 
         {cartItems.map((cartItem) => (
           <CartItem key={cartItem.id} data={cartItem} />
         ))}
 
        <Link to="/Navbar"><button className="button">Retorne</button></Link>
-
       </div>
 
       <div className="cart-resume">{formatCurrency(totalPrice, "BRL")}</div>
