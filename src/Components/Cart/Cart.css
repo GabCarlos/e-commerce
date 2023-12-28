@@ -26,7 +26,6 @@
   background-color: white;
 }
 
-/* Default button styles */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -38,20 +37,15 @@
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: -230px;
-  margin-left: 330px;
+  margin-left: 300px;
 }
 
-/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .button {
-    padding: 8px 16px; /* Adjust padding for smaller screens */
+    padding: 8px 16px; 
   }
 }
 
-/* Add more media queries and styles as needed for different screen sizes */
-
-
-/* Responsive layout for screens smaller than 768px */
 @media (max-width: 768px) {
   .Cart {
     flex-direction: column;
@@ -65,5 +59,3 @@
     text-align: center;
   }
 }
-
-/* Add more media queries as needed for different screen sizes */

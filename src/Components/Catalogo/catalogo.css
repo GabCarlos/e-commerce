@@ -1,0 +1,14 @@
+.catalogoProduct{
+  width: 100%;
+  margin-top: 100%  ;
+}
+
+.pag_p{
+  background: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 350px;
+}

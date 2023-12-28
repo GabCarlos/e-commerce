@@ -4,13 +4,13 @@
   display: flex;
   flex-direction: column;
   position:fixed;
-  background-color: #7849a6;
+  background-color:	#7B68EE ;
   color: #fff;
   text-align: center;
+  width: 30%;
   border-radius: 10%;
-  padding: 20px;
   margin-left: 39%;
-  top: 10%;
+  top: 30%;
 }
 
 .shopTitle {
@@ -42,6 +42,29 @@
   margin: 10px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+h1{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: transparent;
+  color: black;
+  left: -20%;
+  top: -100%;
+  text-align: center;
+}
+
+.catalogo{
+  position: relative;
+}
+
+.verCatalogo{
+  width: 130px;
+  margin-top: 100px;
+  background-color: transparent;
+  color: black;
+
 }
 
 /* Estilos para dispositivos menores (por exemplo, smartphones) */

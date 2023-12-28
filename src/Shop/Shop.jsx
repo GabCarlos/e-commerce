@@ -10,7 +10,15 @@ const Shop = () => {
         <Link to="/Navbar"><button>Enter</button></Link>
         <Link to="/Cart"><button>Cart</button></Link>
       </div>
+
+      <h1>O comércio eletrônico revolucionando o mercado</h1>
+
+      <div className='catalogo'>
+       <Link to="/catalogo"> <button className='verCatalogo'>Produtos</button> </Link>
+      </div>
+
     </div>
+    
   );
 };
 
